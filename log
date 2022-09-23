@@ -181,3 +181,18 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 6506d57
+Fri 23 Sep 2022 12:13:40 PM UTC: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:86:12: error: ‘aux’ undeclared (first use in this function)
+   86 |     return aux->pair;
+      |            ^~~
+treemap.c:86:12: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:87:1: error: control reaches end of non-void function [-Werror=return-type]
+   87 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+4470df9
