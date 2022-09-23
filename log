@@ -74,3 +74,16 @@ treemap.c:77:22: error: expected expression before ‘)’ token
       |                      ^
 Compilation failed
 ce7111b
+Fri 23 Sep 2022 12:06:24 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:77:14: error: ‘TreeNode’ has no member named ‘key’
+   77 |     while(aux->key < )
+      |              ^~
+treemap.c:77:22: error: expected expression before ‘)’ token
+   77 |     while(aux->key < )
+      |                      ^
+Compilation failed
+89ba7a5
