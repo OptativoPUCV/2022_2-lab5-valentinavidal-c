@@ -257,3 +257,29 @@ Fri 23 Sep 2022 12:20:46 PM UTC:
  tests:  11|6
 total_score: 15/70
 15bf04d
+Fri 23 Sep 2022 12:27:10 PM UTC: 
+ treemap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:49:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   49 |   if (tree==NULL) return NULL;
+      |                          ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:50:23: error: ‘TreeMap’ has no member named ‘parent’
+   50 |   TreeNode *aux = tree->parent;
+      |                       ^~
+treemap.c:51:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   51 |   if (aux == NULL)return NULL;
+      |                          ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:52:20: error: ‘TreeMap’ has no member named ‘parent’
+   52 |   while(aux == tree->parent){
+      |                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+086f939
