@@ -219,3 +219,9 @@ treemap.c:77:36: error: returning ‘TreeNode *’ from a function with incompat
 cc1: all warnings being treated as errors
 Compilation failed
 b3354b3
+Fri 23 Sep 2022 12:17:09 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|7
+total_score: 5/70
+7e46182
