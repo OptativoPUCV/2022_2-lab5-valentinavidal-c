@@ -434,3 +434,23 @@ treemap.c:51:13: error: variable ‘padre’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 7741ee2
+Sat 24 Sep 2022 08:21:16 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:55:34: error: ‘TreeNode’ has no member named ‘key’
+   55 |     if (tree->lower_than(key, aux->key)){
+      |                                  ^~
+treemap.c:57:34: error: ‘TreeNode’ has no member named ‘key’
+   57 |     }else if(tree->lower_than(aux->key, key)){
+      |                                  ^~
+treemap.c:52:13: error: unused variable ‘nodo’ [-Werror=unused-variable]
+   52 |   TreeNode *nodo = createTreeNode(key, value);
+      |             ^~~~
+treemap.c:51:13: error: variable ‘padre’ set but not used [-Werror=unused-but-set-variable]
+   51 |   TreeNode *padre = NULL;
+      |             ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7b5c2e2
