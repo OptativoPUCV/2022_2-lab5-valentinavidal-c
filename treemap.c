@@ -93,8 +93,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }return;
   }else if(node->left!=NULL&&node->right!=NULL){
     TreeNode *auxMinimum = minimum(node->right);
-    node->pair->key = auxMinimum->pair->key;
-    node->pair->value = auxMinimum->pair->value;
+    node->pair= auxMinimum->pair;
+    node->pair = auxMinimum->pair;
     node = NULL;
 
     removeNode(tree, auxMinimum);
