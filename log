@@ -283,3 +283,37 @@ treemap.c:52:20: error: ‘TreeMap’ has no member named ‘parent’
 cc1: all warnings being treated as errors
 Compilation failed
 086f939
+Sat 24 Sep 2022 08:09:16 PM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:49:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   49 |   if (tree==NULL) return NULL;
+      |                          ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:50:23: error: ‘TreeMap’ has no member named ‘parent’
+   50 |   TreeNode *aux = tree->parent;
+      |                       ^~
+treemap.c:51:26: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   51 |   if (aux == NULL)return NULL;
+      |                          ^~~~
+treemap.c:48:6: note: declared here
+   48 | void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |      ^~~~~~~~~~~~~
+treemap.c:52:20: error: ‘TreeMap’ has no member named ‘parent’
+   52 |   while(aux == tree->parent){
+      |                    ^~
+treemap.c: In function ‘minimum’:
+treemap.c:62:12: error: ‘X’ undeclared (first use in this function)
+   62 |     return X;
+      |            ^
+treemap.c:62:12: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:63:1: error: control reaches end of non-void function [-Werror=return-type]
+   63 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1fe9aea
