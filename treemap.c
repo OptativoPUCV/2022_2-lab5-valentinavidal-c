@@ -186,9 +186,9 @@ Pair * nextTreeMap(TreeMap * tree) {
     return tree->current->pair->value;
   }
   TreeNode *node = tree->current->parent;
-  while(node!=NULL && tree->current==nodo->right){
-    tree->current=nodo;
-    nodo=nodo->parent;
+  while(node!=NULL && tree->current==node->right){
+    tree->current=node;
+    node=node->parent;
   }
   if(node!=NULL){
     tree->current=node;
